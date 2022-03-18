@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Playfair+Display:700&display=swap&subset=latin-ext');
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    background-image: linear-gradient(#615dad,#ffc8da);
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: lobster;
+    font-size: 48px;
+    margin-block-end: 20px;
+}
+
+.main{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+    align-items: stretch;
+    color: white;
+    box-sizing: border-box;
+    background-color: #283e50;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.description{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+.btn__main{
+    line-height: 2.5;
+    text-decoration: none;
+    color: white;
+}
+.btn__main--rules{
+    background-color: #1fcca4;
+    border-bottom: 1px solid #283e50;
+}
+.btn__main--rules:hover{
+    background-color: #1cbb96;
+}
+.btn__main--play{
+    background-color: #0197f6;  
+}
+.btn__main--play:hover{
+    background-color: #0090e9;
+}
