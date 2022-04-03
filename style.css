@@ -94,7 +94,7 @@ h1{
     padding: 3%;  
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
     .section--rules{
         width: 800px;
     }
