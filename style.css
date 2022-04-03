@@ -47,7 +47,8 @@ img{
     text-decoration: none;
     color: white;
 }
-.btn__main--rules{
+.btn__main--rules,
+.btn__main--homepage{
     background-color: #1fcca4;
     border-bottom: 1px solid #283e50;
 }
@@ -59,4 +60,10 @@ img{
 }
 .btn__main--play:hover{
     background-color: #0090e9;
+}
+
+.icon {
+    filter: invert(100%);
+    width: 1em;
+    height: 1em;
 }
