@@ -53,13 +53,16 @@ h1{
     background-color: #1fcca4;
     border-bottom: 1px solid #283e50;
 }
+
 .btn__main--rules:hover,
 .btn__main--homepage:hover{
     background-color: #1cbb96;
 }
+
 .btn__main--play{
     background-color: #0197f6;  
 }
+
 .btn__main--play:hover{
     background-color: #0090e9;
 }
@@ -69,10 +72,15 @@ h1{
     width: 1em;
     height: 1em;
 }
+
 .list-images-rules {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; 
+    flex-wrap: wrap;  
+    justify-content: space-evenly;
+    margin-bottom: 30px;
 }
+
 .figure--rules {
     display: flex;
     flex-direction: column;
@@ -86,7 +94,6 @@ h1{
     width: 70%;
     list-style-position: inherit;
     align-self: center;
-
 }
 
 .li--rule {
@@ -98,19 +105,15 @@ h1{
     .section--rules{
         width: 800px;
     }
+
     .list--rules {
         width: 80%;
     }
+
     .li--rule {
-        text-align: left;
         padding: 2%;  
     }
-    .list-images-rules{
-        flex-direction: row; 
-        flex-wrap: wrap;  
-        justify-content: space-evenly;
-        margin-bottom: 30px;
-    }
+    
     .figure--rules{
         width: 45%;
         margin-left: 0px;
