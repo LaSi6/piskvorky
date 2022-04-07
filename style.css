@@ -21,7 +21,7 @@ h1{
 }
 
 .main,
-.section--rules{
+.section__rules{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     display: flex;
@@ -76,7 +76,7 @@ h1{
     height: 1em;
 }
 
-.list-images-rules {
+.list-images__rules {
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;  
@@ -84,33 +84,36 @@ h1{
     margin-bottom: 30px;
 }
 
-.figure--rules {
+.figure__rules {
     display: flex;
     flex-direction: column;
     width: 350px;
 }
 
-.note--rules {
+.note__rules {
     font-style: italic;
 }
 
-.list--rules {
-    width: 70%;
-    list-style-position: inherit;
+.list__rules {
+    width: 85%;
+    list-style-position: outside;
     align-self: center;
 }
 
-.li--rule {
+.li__rule {
     text-align: left;
-    padding: 3%;  
+    padding-left: 3%;
+    padding-right: 3%;  
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 @media (min-width: 992px) {
-    .section--rules{
+    .section__rules{
         width: 800px;
     }
 
-    .list--rules {
+    .list__rules {
         width: 85%;
     }
 
@@ -118,7 +121,7 @@ h1{
         padding: 2%;  
     }
 
-    .figure--rules{
+    .figure__rules{
         width: 45%;
         margin-left: 0px;
         margin-right: 0px;
