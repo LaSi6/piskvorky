@@ -18,21 +18,32 @@ h1{
     font-family: lobster;
     font-size: 48px;
     margin-block-end: 20px;
+    text-align: center;
+}
+
+.main,
+.section__rules,
+.section__play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-top: 40px;
+    width: 400px;
+}
+
+.section__play{
+    max-width: 80vmin;
 }
 
 .main,
 .section__rules{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    justify-content: center;
     align-items: stretch;
-    color: white;
     background-color: #283e50;
     text-align: center;
-    margin-top: 40px;
+    width: 400px;
 }
 
 .img--homepage{
@@ -56,17 +67,22 @@ h1{
     background-color: #1fcca4;
     border-bottom: 1px solid #283e50;
 }
-
+.icon--home{
+    background-color: #1fcca4;
+}
 .btn__main--rules:hover,
-.btn__main--homepage:hover{
+.btn__main--homepage:hover,
+.icon--home:hover{
     background-color: #1cbb96;
 }
 
-.btn__main--play{
+.btn__main--play,
+.icon--restart{
     background-color: #0197f6;  
 }
 
-.btn__main--play:hover{
+.btn__main--play:hover,
+.icon--restart:hover{
     background-color: #0090e9;
 }
 
@@ -102,10 +118,53 @@ h1{
 
 .li__rule {
     text-align: left;
-    padding-left: 3%;
-    padding-right: 3%;  
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding: 2% 3% 2% 3%;
+}
+
+.navigation__play,
+.order__play,
+.icons,
+.icon__play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation__play{
+    justify-content: space-between;
+}
+
+.order__play{
+    padding-right: 5px;
+    font-weight: 900;
+}
+
+.icon__play{
+    padding: 2%;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.table__play{
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1/1;
+}
+.table__row{
+    display: flex;
+}
+.cell{
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+    border: 1px solid rgb(49, 49, 49);
+    opacity: 0.7;
+    padding: 0%;
+}
+
+.cell:hover{
+    opacity: 0.9;
 }
 
 @media (min-width: 992px) {
