@@ -167,7 +167,8 @@ h1{
     margin: 0%;
 }
 
-.cell:hover{
+.cell:hover,
+.cell:focus{
     opacity: 0.9;
 }
 
