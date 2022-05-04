@@ -17,7 +17,7 @@ for (let i = 0; i < cell.length; i +=1 ) {
                                 location.reload();
                               } else {       
                               }};
-                                setTimeout(winnerPopup, 333);}
+                                setTimeout(winnerPopup, 200);}
             } else {
                     ev.target.classList.add('board__field--cross');
                     const playerIcon = document.querySelector('.icon--player');
@@ -31,7 +31,7 @@ for (let i = 0; i < cell.length; i +=1 ) {
                                 location.reload();
                               } else {
                               }};
-                                setTimeout(winnerPopup, 333);}
+                                setTimeout(winnerPopup, 200);}
             }
             cell[i].disabled = true
     });
