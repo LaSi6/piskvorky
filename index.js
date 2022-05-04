@@ -69,6 +69,8 @@ const isWinningMove = (field) => {
         const symbol = getSymbol(field);
 
 	let i
+	let y
+	let x
 
 	let inRow = 1 // Jednička pro právě vybrané políčko
 	// Koukni doleva
@@ -80,10 +82,7 @@ const isWinningMove = (field) => {
 
 	// Koukni doprava
 	i = origin.column
-	while (
-		i < boardSize - 1 &&
-		symbol === getSymbol(getField(origin.row, i + 1))
-	) {
+	while (i < boardSize - 1 && symbol === getSymbol(getField(origin.row, i + 1))) {
 		inRow++
 		i++
 	}
@@ -102,15 +101,57 @@ const isWinningMove = (field) => {
 
 	// Koukni dolu
 	i = origin.row
-	while (
-		i < boardSize - 1 &&
-		symbol === getSymbol(getField(i + 1, origin.column))
-	) {
+	while (i < boardSize - 1 && symbol === getSymbol(getField(i + 1, origin.column))) {
 		inColumn++
 		i++
 	}
 
 	if (inColumn >= symbolsToWin) {
+		return true;
+	}
+
+	let inDiagonal = 1
+	//Koukni doprava nahoru
+	y = origin.column
+	x = origin.row
+	while (x > 0 && symbol === getSymbol(getField(x - 1, y + 1)) && y < boardSize -1) {
+		inDiagonal++
+		y++
+		x--
+		console.log(inDiagonal)
+	}
+
+	//Koukni doleva nahoru
+	y = origin.column
+	x = origin.row
+	while (x > 0 && symbol === getSymbol(getField(x - 1, y - 1)) && y > 0) {
+		inDiagonal++
+		y--
+		x--
+		console.log(inDiagonal)
+	}
+
+	//Koukni doprava dolu
+	y = origin.column
+	x = origin.row
+	while (x < boardSize - 1 && symbol === getSymbol(getField(x + 1, y + 1)) && y < boardSize -1) {
+		inDiagonal++
+		y++
+		x++
+		console.log(inDiagonal)
+	}
+
+	//Koukni doleva dolu
+	y = origin.column
+	x = origin.row
+	while (x < boardSize - 1 && symbol === getSymbol(getField(x + 1, y - 1)) && y > 0) {
+		inDiagonal++
+		y--
+		x++
+		console.log(inDiagonal)
+	}
+
+	if (inDiagonal >= symbolsToWin) {
 		return true;
 	}
 
