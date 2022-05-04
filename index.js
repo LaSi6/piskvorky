@@ -50,7 +50,6 @@ const fields = document.querySelectorAll('.cell')
 const getField = (row, column) => {
    return fields[row * boardSize + column]
 }
-console.log(getField(1, 2))
 
 const getPosition = (field) => {
 	let fieldIndex = 0
