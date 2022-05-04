@@ -1,7 +1,7 @@
 let player = 'circle';
 
 const cell = document.querySelectorAll('.cell');
-//Hrací pole
+//Hrací pole a vyhlášení vítěze
 for (let i = 0; i < cell.length; i +=1 ) {
     cell[i].addEventListener('click', (ev) => {
             if (player === 'circle') {
@@ -72,7 +72,7 @@ const isWinningMove = (field) => {
 	let y
 	let x
 
-	let inRow = 1 // Jednička pro právě vybrané políčko
+	let inRow = 1
 	// Koukni doleva
 	i = origin.column
 	while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
@@ -118,7 +118,6 @@ const isWinningMove = (field) => {
 		inDiagonal++
 		y++
 		x--
-		console.log(inDiagonal)
 	}
 
 	//Koukni doleva nahoru
@@ -128,7 +127,6 @@ const isWinningMove = (field) => {
 		inDiagonal++
 		y--
 		x--
-		console.log(inDiagonal)
 	}
 
 	//Koukni doprava dolu
@@ -138,7 +136,6 @@ const isWinningMove = (field) => {
 		inDiagonal++
 		y++
 		x++
-		console.log(inDiagonal)
 	}
 
 	//Koukni doleva dolu
@@ -148,7 +145,6 @@ const isWinningMove = (field) => {
 		inDiagonal++
 		y--
 		x++
-		console.log(inDiagonal)
 	}
 
 	if (inDiagonal >= symbolsToWin) {
